@@ -7,21 +7,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling Project'
-                bat 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running Tests'
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
 
         stage('Package') {
             steps {
                 echo 'Packaging JAR'
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }
 
